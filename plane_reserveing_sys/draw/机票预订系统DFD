@@ -1,0 +1,48 @@
+// 机票预订系统数据流图
+digraph {    
+	node [fontname=SimSun]
+	edge [fontname=SimSun]
+	A [label="旅客"]
+	B [label="旅行社"]
+	C [label="航空公司"]
+	D [label="预定系统"]
+	E [label="航班安排"]
+	F [label="财务系统"]
+	G [label="机票打印"]
+	H [label="取票通知和账单"]
+	I [label="旅客信息"]
+	J [label="支付系统"]
+	K [label="延误处理"]
+	L [label="班机取消处理"]
+	M [label="更改班次处理"]
+	A -> B
+	B -> C
+	C -> D
+	D -> A
+	D -> E
+	E -> F
+	F -> G
+	H -> A
+	I -> J
+	J -> F
+	K -> D
+	L -> D
+	M -> D
+	A -> D [label="取票通知和账单"]
+	B -> C [label="旅客信息"]
+	C -> D [label="预定请求"]
+	D -> A [label="预定确认"]
+	D -> E [label="航班信息"]
+	E -> F [label="收款"]
+	F -> G [label="打印指令"]
+	G -> A [label="机票"]
+	A -> I [label="提供信息"]
+	I -> J [label="支付"]
+	J -> F [label="支付确认"]
+	A -> K [label="延误"]
+	K -> D [label="延误通知"]
+	A -> L [label="取消"]
+	L -> D [label="取消请求"]
+	A -> M [label="更改请求"]
+	M -> D [label="更改确认"]
+}

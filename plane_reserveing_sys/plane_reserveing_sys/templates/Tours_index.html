@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>旅行社机票预订系统</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+    <link rel="stylesheet" href="{% static 'css/Tours.css' %}">
+    <script src="{% static 'js/Tours.js' %}"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <img src="{% static 'images/logo.png' %}" alt="校徽" class="logo">
+        <div class="top-bar-text">
+            用户ID: 12345 | 用户类型: 管理员
+        </div>
+    </div>
+    
+    <div class="sidebar" id="sidebar">
+        <a href="#" data-target="#info-input" class="active">旅客信息输入</a>
+        <a href="#" data-target="#flight-search">航班查询</a>
+        <a href="#" data-target="#book-ticket">预订机票</a>
+        <a href="#" data-target="#print-notice">取票通知打印</a>
+        <a href="#" data-target="#missed-pickup">延误取票处理</a>
+        <a href="#" data-target="#flight-cancellation">班机取消处理</a>
+        <a href="#" data-target="#change-flight">更改机票班次</a>
+    </div>
+
+    <div class="container">
+        <!-- 旅客信息输入 -->
+        <div id="info-input" class="content active">
+            <div class="content-container">
+                <h2>旅客信息输入</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">姓名:</label>
+                        <input type="text" id="name" name="name" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">性别:</label>
+                        <select id="gender" name="gender">
+                            <option value="male">男</option>
+                            <option value="female">女</option>
+                        </select><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="work_unit">工作单位:</label>
+                        <input type="text" id="work_unit" name="work_unit" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_number">身份证号码:</label>
+                        <input type="text" id="id_number" name="id_number" required>
+                        <div id="id_error" class="error-message" style="display: none;"></div><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="travel_date">旅行时间:</label>
+                        <input type="date" id="travel_date" name="travel_date" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">旅行目的地:</label>
+                        <input type="text" id="destination" name="destination" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="file">或上传所有乘客清单excel文件:</label>
+                        <input type="file" id="file" name="file"><br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="提交预订" class="submit-button">
+                    </div>
+                </form>
+            </div>
+</div>
+            <!-- <div class="content-container" >
+                <h3>已输入的用户信息</h3>
+                <div id="user-info"></div>
+            </div> -->
+        
+
+            <!-- 用户信息显示区域 -->
+
+
+        <!-- 航班查询 -->
+        <div id="flight-search" class="content">
+            <div class="content-container">
+                <h2>航班查询</h2>
+                <form>
+                    <label for="flight_number">航班号:</label>
+                    <input type="text" id="flight_number" name="flight_number"><br>
+                    <input type="submit" value="查询">
+                </form>
+            </div>
+        </div>
+        <!-- 其他内容... -->
+    </div>
+
+    <script>
+      
+    </script>
+</body>
+</html>
+
+    <script>
+
+    </script>
+</body>
+</html>

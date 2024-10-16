@@ -1,0 +1,14 @@
+// IPO图
+digraph {
+	node [fontname=SimSun]
+	edge [fontname=SimSun]
+	Process [label="处理过程"]
+	PassengerInfo [label="旅客信息"]
+	FlightInfo [label="航班信息"]
+	Ticket [label="机票"]
+	Itinerary [label="行程单"]
+	PassengerInfo -> Process [label="旅客信息"]
+	FlightInfo -> Process [label="航班信息"]
+	Process -> Ticket [label="生成机票"]
+	Process -> Itinerary [label="生成行程单"]
+}

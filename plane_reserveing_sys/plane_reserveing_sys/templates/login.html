@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>机票预订系统登录</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4;
+    display: flex; */
+    background-image: url("{% static 'images/plane4.jpg' %}");
+
+    background-size: cover; /* 覆盖整个元素 */
+    background-position: center; /* 将图片置于中心 */
+    background-repeat: no-repeat; /* 不重复图片 */
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    width: 80%; /* 调整宽度 */
+    max-width: 500px; /* 设置一个最大宽度 */
+    background: rgba(255, 255, 255, 0.9); /* 设置背景为半透明 */
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 3%; /* 调整内边距 */
+
+    box-sizing: border-box; /* 确保宽度包括 padding 和 border */
+    position: absolute; /* 设置为绝对位置 */
+    top: 55%; /* 从顶部开始，偏移50% */
+    left: 50%; /* 从左侧开始，偏移50% */
+    transform: translate(-50%, -50%); /* 偏移自身50%，实现居中 */
+}
+        h2 {
+            margin: 0 0 20px;
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            position: relative; /* 为图标定位 */
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin:0px
+        }
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 20px; /* 为注册链接留出空间 */
+        }
+        .login-button:hover {
+            background-color: #4cae4c;
+        }
+        .register-link {
+            color: #007bff;
+            text-decoration: underline;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .register-link:hover {
+            color: #0056b3;
+        }
+        .messages {
+            text-align: center;
+            padding-left: 10px;
+        }
+        .messages li {
+            list-style-type: none;
+            color: red;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+        /* 添加开发者信息的样式 */
+        .developer-info {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            color: black;
+        }
+        /* 校徽和标题的样式 */
+        .logo-title-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 100%; /* 根据实际校徽图片大小调整 */
+            height: auto;
+        }
+        .site-title {
+            font-size: 34px;
+            font-weight: bold;
+            color: #333;
+            margin-left: 10px;
+            margin-bottom: 40px;
+            font-family: 'Arial Black', Gadget, sans-serif; /* 艺术字风格的字体 */
+        }
+    </style>
+</head>
+<body>
+    <div id="particle-container"></div>
+    <div class="logo-title-container">
+        <img src="{% static 'images/logo.png' %}" alt="校徽" class="logo">
+        
+    </div>
+    <div class="login-container">
+        <div class="site-title">智能机票预订系统</div>
+        <!-- <h2>欢迎登录</h2> -->
+        <form action="/login/" method="POST">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="username">用户名</label>
+                <input type="text" id="username" name="username" placeholder="请输入用户名" required>
+            </div>
+            <div class="input-group">
+                <label for="password">密码</label>
+                <input type="password" id="password" name="password" placeholder="请输入密码" required>
+                {% if messages %}
+                <ul class="messages">
+                  {% for message in messages %}
+                    <li class="{{ message.tags }}">{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+            <button type="submit" class="login-button">登录</button>
+            <a href="/register/" class="register-link">注册账号</a> <!-- 修改为链接形式 -->
+        </form>
+    </div>
+    <div class="developer-info">
+        © 2024 南信大计科4班 zrc cyh pxy 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js/particles.min.js"></script>    
+    <script src="{% static 'js/login.js' %}"></script>
+</body>
+</html>

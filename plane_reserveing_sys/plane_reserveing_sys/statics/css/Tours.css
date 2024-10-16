@@ -1,0 +1,203 @@
+.hidden {
+    display: none;
+
+}
+        /* 添加一些基本样式 */
+.error-message {
+color: red;
+font-size: 12px;
+}
+.user-info-container {
+background-color: #fff; /* 背景颜色为白色 */
+padding: 40px; /* 内边距 */
+padding-top: 10px;
+padding-right: 200px;
+border-radius: 30px; /* 边框圆角 */
+margin-top: 40%;
+
+height: 70%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+margin-bottom: 50px; /* 底部间距 */
+word-wrap: break-word; /* 确保长单词或URL可以换行 */
+}
+        
+/* 添加顶部栏的样式 */
+.top-bar {
+background-color: #333;
+color: #fff;
+padding: 10px 20px;
+position: fixed;
+width: calc(100% - 180px); /* 减去侧边栏的宽度 */
+top: 0;
+left: 180px; /* 侧边栏的宽度 */
+z-index: 999;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+}
+.content {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+/* 设置container的背景色为白色 */
+/* 添加顶部栏的样式 */
+.top-bar {
+background-color: #333;
+color: #fff;
+padding: 10px 20px;
+position: fixed;
+width: calc(100% - 180px); /* 减去侧边栏的宽度 */
+top: 0;
+left: 180px; /* 侧边栏的宽度 */
+z-index: 999;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+}
+
+/* 设置container的背景色为白色 */
+.content-container {
+background-color: #fff; /* 背景颜色为白色 */
+padding: 40px; /* 内边距 */
+padding-top: 10px;
+padding-right: 200px;
+border-radius: 30px; /* 边框圆角 */
+margin-top: 40%;
+
+height: 70%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+margin-bottom: 50px; /* 底部间距 */
+word-wrap: break-word; /* 确保长单词或URL可以换行 */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../images/plane3.jpg");
+    background-color: rgb(213, 213, 213);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.sidebar {
+    width: 180px;
+    height: 100vh;
+    background: #333;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    transition: left 0.3s ease-in-out;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+.sidebar a:hover {
+    background-color: #444;
+}
+.sidebar.active {
+    left: -250px;
+}
+.toggle-button {
+    position: fixed;
+    left: 10px;
+    top: 40px;
+    background: #333;
+    color: #fff;
+    padding: 40px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.container {
+    margin-left: 180px;
+    padding: 100px;
+    padding-top: 100px;
+    transition: margin-left 0.3s ease-in-out;
+}
+.sidebar.active ~ .container {
+    margin-left: 0;
+    margin-top: 20px;
+}
+.content {
+    display: none;
+}
+.content.active {
+    display: block;
+}
+.form-group {
+margin-bottom: 20px; /* 增加元素之间的间距 */
+}
+
+.form-group label {
+display: block; /* 确保标签在输入框上方 */
+margin-bottom: 5px; /* 标签和输入框之间的间距 */
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group input[type="date"] {
+width: 100%; /* 输入框宽度 */
+padding: 8px; /* 输入框内边距 */
+border: 1px solid #ccc; /* 输入框边框 */
+border-radius: 4px; /* 输入框圆角 */
+}
+
+.form-group input[type="file"] {
+margin-top: 5px; /* 文件上传输入框的间距 */
+}
+
+.submit-button {
+padding: 10px 20px; /* 提交按钮的内边距 */
+background-color: #5cb85c; /* 提交按钮的背景颜色 */
+color: white; /* 提交按钮的文字颜色 */
+border: none; /* 提交按钮的边框 */
+border-radius: 4px; /* 提交按钮的圆角 */
+cursor: pointer; /* 提交按钮的鼠标光标 */
+font-size: 16px; /* 提交按钮的字体大小 */
+}
+
+.submit-button:hover {
+background-color: #4cae4c; /* 提交按钮悬停时的背景颜色 */
+}
+.top-bar {
+background-color: #ffffffc9; /* 背景颜色改为白色 */
+color: #000; /* 字体颜色改为黑色 */
+padding: 10px; /* 内边距 */
+position: fixed;
+width: 100%; /* 设置为视口的100%宽度 */
+top: 0;
+left: 0; /* 从视口的左侧开始 */
+z-index: 1000; /* 确保顶部栏在侧边栏之上 */
+display: flex;
+align-items: center;
+justify-content: start; /* 文本靠左对齐 */
+font-size: 16px; /* 增大字体大小 */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* 增大阴影效果，使其更立体 */
+overflow: hidden; /* 隐藏溢出的文本 */
+white-space: nowrap; /* 防止文本换行 */
+text-overflow: ellipsis; /* 显示省略号 */
+}
+
+.logo {
+height: 30px; /* 校徽高度，根据实际图片调整 */
+margin-right: 10px; /* 与文本之间的间距 */
+}
+
+.top-bar-text {
+display: flex;
+align-items: center;
+margin-left: 20px; /* 与校徽的间距 */
+font-weight: bold; /* 字体加粗 */
+}

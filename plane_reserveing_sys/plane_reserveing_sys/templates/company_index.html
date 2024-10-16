@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>航空公司管理</title>
+</head>
+<body>
+    <h1>欢迎, 航空公司</h1>
+    <h2>航班载客情况</h2>
+    <table border="1">
+        <tr>
+            <th>航班号</th>
+            <th>目的地</th>
+            <th>乘载情况</th>
+        </tr>
+        <tr>
+            <td>CZ123</td>
+            <td>北京</td>
+            <td>80%</td>
+        </tr>
+        <!-- 更多航班信息 -->
+    </table>
+    <h2>操作</h2>
+    <form action="/cancel_flight" method="post">
+        航班号：<input type="text" name="flight_number" required>
+        <input type="submit" value="取消航班">
+    </form>
+</body>
+</html>

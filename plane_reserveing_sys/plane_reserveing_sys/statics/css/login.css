@@ -1,0 +1,162 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            width: 500px; /* 调整宽度 */
+            max-width: 100%;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            margin: 0 0 20px;
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            position: relative; /* 为图标定位 */
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px; /* 为注册按钮留出空间 */
+        }
+        .login-button:hover {
+            background-color: #4cae4c;
+        }
+        .register-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f0ad4e;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .register-button:hover {
+            background-color: #ec971f;
+        }
+        .messages {
+            text-align: center;
+            padding-left: 10px;
+        }
+        .messages li {
+            list-style-type: none;
+            color: red;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            width: 500px; /* 调整宽度 */
+            max-width: 100%;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            margin: 0 0 20px;
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            position: relative; /* 为图标定位 */
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px; /* 为注册按钮留出空间 */
+        }
+        .login-button:hover {
+            background-color: #4cae4c;
+        }
+        .register-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f0ad4e;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .register-button:hover {
+            background-color: #ec971f;
+        }
+        .messages {
+            text-align: center;
+            padding-left: 10px;
+        }
+        .messages li {
+            list-style-type: none;
+            color: red;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.8em;
+            font-weight: normal;
+        }
